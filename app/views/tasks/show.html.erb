@@ -1,7 +1,10 @@
-<div class="container">
-  <h2><%= @task.title %></h2>
+<div class="container justify-content-center col-6 d-block">
+
+  <h1><%= @task.title %></h1>
   <p><%= @task.details %></p>
   <p><%= @task.completed %></p>
-
   <%= link_to "Back to list", tasks_path  %>
+  <%= link_to "Edit Task", edit_task_path(@task)  %>
+  <i class=" icons fas fa-trash-alt"></i>
+  <%= link_to "Delete Task", destroy_path(@task), method: :delete  %>
 </div>
